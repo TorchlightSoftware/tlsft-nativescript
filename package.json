@@ -9,43 +9,46 @@
     }
   },
   "description": "NativeScript Application",
-  "license": "SEE LICENSE IN <your-license-filename>",
-  "repository": "<fill-your-repository-here>",
+  "license": "MIT",
+  "repository": "https://github.com/TorchlightSoftware/tlsft-nativescript",
   "dependencies": {
     "@nativescript/theme": "~2.2.0",
     "nativescript-ui-sidedrawer": "~8.0.0",
     "nativescript-vue": "~2.4.0",
-    "rxjs": "^6.4.0",
-    "tns-core-modules": "~6.2.0"
+    "rxjs": "^6.5.4",
+    "tns-core-modules": "^6.3.2"
   },
   "devDependencies": {
     "@babel/core": "~7.1.0",
     "@babel/preset-env": "~7.1.0",
+    "acorn": "^7.1.0",
     "babel-eslint": "^10.0.3",
     "babel-loader": "~8.0.0",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^6.0.1",
+    "eslint-plugin-vue": "^6.1.2",
     "husky": "^3.1.0",
+    "lint-staged": "^10.0.3",
     "nativescript-dev-webpack": "~1.3.0",
     "nativescript-vue-template-compiler": "~2.4.0",
-    "node-sass": "^4.7.1",
+    "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
+    "typescript": "^3.7.5",
     "vue-loader": "~15.4.0"
   },
   "lint-staged": {
     "*.js": [
-      "prettier --write 'src/**/*.js'",
-      "eslint --ext .js --fix src",
+      "prettier --write 'app/**/*.js'",
+      "eslint --ext .js --fix app",
       "git add"
     ],
     "*.vue": [
-      "prettier --write 'src/**/*.vue'",
-      "eslint --ext .vue --fix src",
+      "prettier --write 'app/**/*.vue'",
+      "eslint --ext .vue --fix app",
       "git add"
     ]
   },
