@@ -1,20 +1,17 @@
-import Vue from "nativescript-vue";
-import App from "./components/App";
-import Home from "./components/Home";
-import DrawerContent from "./components/DrawerContent";
-import RadSideDrawer from "nativescript-ui-sidedrawer/vue";
-Vue.use(RadSideDrawer);
+// TNS_ENV needs to be set globally
+/* eslint-disable no-undef */
 
-Vue.config.silent = (TNS_ENV === 'production');
+import Vue from 'nativescript-vue'
+import App from './components/App'
+import Home from './components/Home'
+import DrawerContent from './components/DrawerContent'
+import RadSideDrawer from 'nativescript-ui-sidedrawer/vue'
+Vue.use(RadSideDrawer)
+
+Vue.config.silent = TNS_ENV === 'production'
 
 new Vue({
-    render (h) {
-        return h(
-          App,
-          [
-            h(DrawerContent, { slot: 'drawerContent' }),
-            h(Home, { slot: 'mainContent' })
-          ]
-        )
-      }
-  }).$start();
+  render(h) {
+    return h(App, [h(DrawerContent, {slot: 'drawerContent'}), h(Home, {slot: 'mainContent'})])
+  },
+}).$start()
